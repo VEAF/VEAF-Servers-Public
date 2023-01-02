@@ -24,6 +24,8 @@ On peut retrouver les fichiers qui référencent un paramètre en cherchant `SER
 |`Users\veaf\watchdog_private_server.ps1`|
 |`Users\veaf\watchdog_PERUN_PRIVATE.ps1`|
 |`Users\veaf\watchdog_SRS_PRIVATE.ps1`|
+|`Users\veaf\Desktop\deleteOldFiles.cmd`|
+|`Users\veaf\Desktop\relancer les serveurs.cmd`|
 
 ## VERSIONS
 

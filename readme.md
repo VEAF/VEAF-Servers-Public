@@ -11,21 +11,21 @@ Pour ce faire, suivez les instructions ci-dessous.
 ## Pré-requis
 
 Une VM Windows 10 avec les logiciels suivants installés :
-- NodeJS
 - DCS
 
 Optionnel :
-- OvGME
 - Tacview
 - LotATC
 - SRS
 - PERUN
+- OvGME
+- NodeJS
 
 ## Installation
 
-Il faut installer DCS dans un répertoire de votre choix, par exemple `C:\DCS`.
+Il faut installer [le serveur dédié DCS](https://www.digitalcombatsimulator.com/en/downloads/world/server_beta/) dans un répertoire de votre choix, par exemple `c:\DCS World OpenBeta Server`.
 
-Ensuite, il faut déclarer des serveurs autonomes DCS dans `Saved Games`.
+Ensuite, il faut déclarer des serveurs DCS dans `Saved Games`, comme par exemple `Users\veaf\Saved Games\private_server`.
 
 ## Configuration
 
@@ -41,12 +41,15 @@ En pratique, on créera ces liens :
 
 |Source du lien|Destination du lien|
 |---|---|
-|`Users\veaf\Saved Games\BannedClients.lua`|`Users\veaf\Saved Games\private_server\Slmod`|
-|`Users\veaf\Saved Games\ExemptClients.lua`|`Users\veaf\Saved Games\private_server\Slmod`|
-|`Users\veaf\Saved Games\ServerAdmins.lua`|`Users\veaf\Saved Games\private_server\Slmod`|
-|`Users\veaf\Saved Games\veaf-pilots.txt`|`Users\veaf\Saved Games\private_server\Scripts\Hooks`|
+|`Users\veaf\Saved Games\BannedClients.lua`|`Users\veaf\Saved Games\private_server\Slmod` (1)|
+|`Users\veaf\Saved Games\ExemptClients.lua`|`Users\veaf\Saved Games\private_server\Slmod` (1)|
+|`Users\veaf\Saved Games\ServerAdmins.lua`|`Users\veaf\Saved Games\private_server\Slmod` (1)|
+|`Users\veaf\Saved Games\veaf-pilots.txt`|`Users\veaf\Saved Games\private_server\Scripts\Hooks` (1)|
+|`Users\veaf\Saved Games\DCS.missions\configuration.json`|`Users\veaf\Saved Games\DCS.missions\VEAF_OpenTraining-Caucasus` (2)|
 
-(on fera un lien par serveur, ici `private_server` est un serveur)
+(1) On fera un lien par serveur (ici `private_server` est un serveur)
+
+(2) On fera un lien par mission dynamique (ici `VEAF_OpenTraining-Caucasus` est une mission dynamique avec les scripts VEAF)
 
 ### Liens sur le bureau
 
