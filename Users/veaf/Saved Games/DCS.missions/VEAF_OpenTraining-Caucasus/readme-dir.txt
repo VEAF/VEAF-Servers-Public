@@ -1,0 +1,1 @@
+This folder contains everything that is needed to compile fresh versions of the OpenTraining-Caucasus mission

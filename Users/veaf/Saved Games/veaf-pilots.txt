@@ -1,0 +1,24 @@
+pilots = 
+{
+    -- server administrator - fake user
+  ["0123456789ABCDEF012345-AdminVEAF"] = { name="Server administrator", level=100},
+  -- administrators
+  -- can run everything, including arbitrary code
+  ["52634665456b78b69187e04111861b88"] = { name="SuperAdminDCSPlayer", level=99},
+  -- power users
+  -- can set the server to restart even if someone is connected
+  ["465465465465465465db8022ccf3c2bd"] = { name="SuperPowerUserDCSPlayer", level=50},
+  -- can set the mission to reload even if someone is connected
+  ["46546546546546545f22a35896f52f0d"] = { name="PowerUserDCSPlayer", level=30},
+  -- member users
+  -- can set the server to restart at the next time there is no one connected
+  ["66655896663253508a2a2599904581aa"] = { name="MemberDCSPlayer", level=10},
+  -- registered guests
+  -- can unlock the commands, spawn things and start combat missions and zones
+  ["fffffffffffffffffffffffffffffff1"] = { name="John Doe", level=1},
+  -- guests
+  -- can only send messages
+  ["fffffffffffffffffffffffffffffff2"] = { name="Jim Doe", level=0}
+} -- end of pilots
+
+

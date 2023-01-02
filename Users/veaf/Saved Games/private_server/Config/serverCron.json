@@ -1,0 +1,69 @@
+{
+  "name": "private",
+  "default": "Caucasus-morning-real",
+  "moments": [
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "1",
+      "hour": null,
+      "mission": "Carrier-Training-2021-dawn-scattered"
+    },
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "2",
+      "hour": null,
+      "mission": "Caucasus-morning-overcast-rain"
+    },
+    {
+      "month": null,
+      "dayOfMonth": "1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31",
+      "dayOfWeek": "4",
+      "hour": null,
+      "mission": "Light-Training-2021-morning-broken"
+    },
+    {
+      "month": null,
+      "dayOfMonth": "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30",
+      "dayOfWeek": "4",
+      "hour": null,
+      "mission": "Light-Training-2021-evening-broken"
+    },	
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "3",
+      "hour": null,
+      "mission": "Carrier-Training-2021-day-scattered"
+    },
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "5",
+      "hour": null,
+      "mission": "Caucasus-beforedawn-real-clear"
+    },
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "6",
+      "hour": null,
+      "mission": "Caucasus-dawn-crosswind-vaziani"
+    },
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "7",
+      "hour": "0-16",
+      "mission": "Carrier-Training-2021-day-overcast-rain"
+    },
+    {
+      "month": null,
+      "dayOfMonth": null,
+      "dayOfWeek": "7",
+      "hour": "17-24",
+      "mission": "Carrier-Training-2021-night-real"
+    }
+  ]
+}

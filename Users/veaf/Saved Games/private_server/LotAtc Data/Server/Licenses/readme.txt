@@ -1,0 +1,1 @@
+PUT your server licence files here, they'll be picked up by unlicensed clients.
