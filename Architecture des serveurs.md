@@ -62,7 +62,7 @@ TODO trouver la version
 ### DCS SERVER
 - DCS.webgui_port = 10401
 - DCS.webrtc_port = 10402
-- DCS.port = 10403
+- DCS.ext = 10403
 - DCS.password = "BIRDSEED@dietetic6arroyo"
 
 |Référencé dans|
@@ -71,7 +71,7 @@ TODO trouver la version
 |`Users\veaf\Saved Games\private_server\Config\serverSettings-default.lua`|
 
 ### LotATC
-- LotATC = 10404
+- LotATC.ext = 10404
 - LotATC.BLUE = "gone1mulberry@DENGUE"
 - LotATC.RED = "polarity_CHIMERIC4peduncle"
 
@@ -81,7 +81,7 @@ TODO trouver la version
 
 ### SRS 
 - SRS_LotATC = 10405
-- SRS = 10406
+- SRS.ext = 10406
 - SRS.ExternalAwacs_BLUE = "DOXOLOGY2vincible_polyp"
 - SRS.ExternalAwacs_RED = "thallium5MATTRESS.threw"
 - SRS.domain = srs.mydomain.org

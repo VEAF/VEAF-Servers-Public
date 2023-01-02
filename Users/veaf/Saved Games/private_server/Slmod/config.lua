@@ -757,7 +757,7 @@ debugger_outfile = "Lua_Syntax_Errors.txt"
 --[[Slmod sends data from the mission scripting Lua environment to the net environment through localhost (your own computer) via
 a UDP port.  By default, this UDP port is 52146, which is not a port used by anything known.  However, if you want to change 
 it, specify a different port here (note: must be a VALID port!).]]
-udp_port = 52156
+udp_port = 10407
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Config version, only change this to force the config to be rechecked/rewritten!

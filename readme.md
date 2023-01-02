@@ -57,11 +57,18 @@ C'est un mod optionnel qui permet d'afficher une image de lancement pour les ser
 
 Le fichier [Architecture des serveurs.md](Architecture%20des%20serveurs.md) contient les données de configuration des serveurs.
 
-Il est très important de le tenir à jour.
+Il est très important de le tenir à jour, afin de s'assurer que tout est documenté clairement.
 
 ### Liens symboliques
 
 Pour éviter de recopier la même configuration à de nombreux endroits, il est conseillé de créer des liens symboliques.
+
+Pour ça on peut utiliser la commande *mklink* de Windows :
+
+```cmd
+MKLINK /D "C:\Users\veaf\Saved Games\private_server\Slmod\BannedClients.lua" "C:\Users\veaf\Saved Games\BannedClients.lua"
+```
+Attention, la syntaxe c'est d'abord la cible du lien, puis la source (inversé par rapport au tableau ci-dessous)
 
 En pratique, on créera ces liens :
 
@@ -87,3 +94,23 @@ Il faut refaire les liens sur le bureau en fonction des serveurs.
 |`Surveillance PRIVATE.lnk`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\watchdog_private_server.ps1`|
 |`Surveillance SRS PRIVATE.lnk`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\watchdog_SRS_PRIVATE.ps1`|
 |`Surveillance PERUN PRIVATE`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\watchdog_PERUN_PRIVATE.ps1`|
+
+## Installation d'un serveur DCS
+
+### Création d'un serveur DCS
+
+On commence par choisir le nom du serveur, par exemple `private_server`. 
+
+Il faut également sélectionner des ports pour DCS et aussi pour tous les outils.
+
+Le plus simple est de recopier la configuration exemple que nous donnons ici (serveur "private_server"), et de la modifier en fonction des besoins.
+
+Attention : c'est évident, mais il ne faut pas que les ports soient utilisés par un autre serveur DCS !
+
+Il faudra prendre soin d'ouvrir les ports externes dans le pare-feu de Windows. Cela concerne :
+- DCS :  *DCS.ext*
+- LotATC : *LotATC.ext*
+- SRS : *SRS.ext*
+- Tacview : *TACVIEW.remoteControl* et *TACVIEW.realtimeTelemetry*
+
+### Installation de 
