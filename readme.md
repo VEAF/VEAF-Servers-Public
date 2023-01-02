@@ -50,4 +50,11 @@ En pratique, on créera ces liens :
 
 ### Liens sur le bureau
 
-Il faut refaire les liens sur le bureau en fonction des serveurs. Par exemple `Users\veaf\Desktop\Stop PRIVATE.lnk` doit pointer vers `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\stop_private_server.ps1` et `Users\veaf\Desktop\Start PRIVATE.lnk` doit pointer vers `Users\veaf\DCS\Scripts\VEAF\StartServer.bat`.
+Il faut refaire les liens sur le bureau en fonction des serveurs. 
+
+|Source du lien|Destination du lien|
+|---|---|
+|`Stop PRIVATE.lnk`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\stop_private_server.ps1`|
+|`Surveillance PRIVATE.lnk`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\watchdog_private_server.ps1`|
+|`Surveillance SRS PRIVATE.lnk`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\watchdog_SRS_PRIVATE.ps1`|
+|`Surveillance PERUN PRIVATE`|`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\veaf\watchdog_PERUN_PRIVATE.ps1`|
