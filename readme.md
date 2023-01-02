@@ -25,7 +25,33 @@ Optionnel :
 
 Il faut installer [le serveur dédié DCS](https://www.digitalcombatsimulator.com/en/downloads/world/server_beta/) dans un répertoire de votre choix, par exemple `c:\DCS World OpenBeta Server`.
 
+Attention, il faut installer la version `OpenBeta` du serveur, et non la version `Stable`.
+
+Si vous installez ailleurs que dans `c:\DCS World OpenBeta Server`, il faudra modifier les scripts de démarrage et d'arrêt des serveurs (e.g. `Users\veaf\just-run-dcs.cmd`).
+
 Ensuite, il faut déclarer des serveurs DCS dans `Saved Games`, comme par exemple `Users\veaf\Saved Games\private_server`.
+
+## Installation des mods
+
+Il faut installer des mods dans le répertoire d'installation de DCS. 
+
+Nous conseillons l'utilisation d'OvGME pour installer les mods, mais c'est possible de le faire manuellement.
+
+Attention : après chaque mise à jour de DCS il faudra réinstaller les mods.
+
+### Mod "Hacks - desanitize for SlMod"
+
+Ce mod permet d'étendre ce qui est possible de faire en LUA dans DCS, ce qui est nécessaire pour que SlMod fonctionne correctement.
+
+Par défaut, DCS désactive (sanitize) certaines fonctions de LUA pour des raisons de sécurité.
+
+Ce mod permet de les réactiver.
+
+Attention : ce mod installe le fichier `Scripts\MissionScripting.lua` dans le répertoire d'installation de DCS, et il doit être identique au fichier de SLMOD qui est présent dans chaque serveur DCS configuré (e.g. `Saved Games\private_server\Scripts\net\Slmodv7_6\SlmodMissionScripting.lua`). Si le fichier est édité à un seul des deux endroits, ça ne fonctionnera pas !
+
+### Mod "Correction - missing launcher  image"
+
+C'est un mod optionnel qui permet d'afficher une image de lancement pour les serveurs DCS. En effet un bug existe depuis des années, qui fait que les fenêtre de lancement des serveurs DCS apparaissent vides.
 
 ## Configuration
 

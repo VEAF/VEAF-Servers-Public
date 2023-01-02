@@ -1,5 +1,6 @@
 -- SERVER-CONFIG-DATA PORTS
 -- SERVER-CONFIG-DATA PASSWORDS
+-- SERVER-CONFIG-DATA TEXTS
 -- SERVER-CONFIG-DATA WINDOWS_USERNAME
 
 cfg = 
@@ -41,7 +42,7 @@ Server description\
     ["listShuffle"] = false,
     ["password"] = "BIRDSEED@dietetic6arroyo",
     ["listLoop"] = false,
-    ["name"] = "VEAF (www.veaf.org) [fr] - Privé 1",
+    ["name"] = "Serveur privé",
     ["missionList"] = 
     {
       [001] = "C:\\Users\\veaf\\Saved Games\\DCS.missions\\empty-caucasus.miz",
