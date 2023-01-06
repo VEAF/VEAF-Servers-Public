@@ -2,7 +2,7 @@ dofile('Scripts/ScriptingSystem.lua')
 
 -- Zip - 2022.12.17 - J'ajoute cette ligne suite aux instructions de LotATC (https://www.lotatc.com/documentation/server/mission_lua.html#dcs-world-modification)
 -- The following line must be added
-dofile(lfs.writedir()..[[Mods\services\LotAtc\lua utils\lotatcMissionServer.lua]])
+-- dofile(lfs.writedir()..[[Mods\services\LotAtc\lua utils\lotatcMissionServer.lua]])
 
 -- Zip - 2022.12.17 - Je n'ai aucune idée de qui a mis cette ligne ni pourquoi, je la commente en attendant de comprendre
 --                    De toute manière ça n'était pas utilisé, puisqu'il faut également modifier les fichiers "Saved Games\XXXX_server\Scripts\net\Slmodv7_6\SlmodMissionScripting.lua" 

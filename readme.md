@@ -27,7 +27,7 @@ Il faut installer [le serveur dédié DCS](https://www.digitalcombatsimulator.co
 
 Attention, il faut installer la version `OpenBeta` du serveur, et non la version `Stable`.
 
-Si vous installez ailleurs que dans `c:\DCS World OpenBeta Server`, il faudra modifier les scripts de démarrage et d'arrêt des serveurs (e.g. `Users\veaf\just-run-dcs.cmd`).
+Si vous installez ailleurs que dans `c:\DCS World OpenBeta Server`, il faudra modifier les scripts de démarrage et d'arrêt des serveurs (e.g. `Users\veaf\just-run-dcs.cmd`). Aussi, nous déconseillons d'installer DCS dans "Program files", parce que ça peut poser des problèmes de droits d'accès.
 
 Ensuite, il faut déclarer des serveurs DCS dans `Saved Games`, comme par exemple `Users\veaf\Saved Games\private_server`.
 
@@ -66,7 +66,7 @@ Pour éviter de recopier la même configuration à de nombreux endroits, il est 
 Pour ça on peut utiliser la commande *mklink* de Windows :
 
 ```cmd
-MKLINK /D "C:\Users\veaf\Saved Games\private_server\Slmod\BannedClients.lua" "C:\Users\veaf\Saved Games\BannedClients.lua"
+MKLINK "C:\Users\veaf\Saved Games\private_server\Slmod\BannedClients.lua" "C:\Users\veaf\Saved Games\BannedClients.lua"
 ```
 Attention, la syntaxe c'est d'abord la cible du lien, puis la source (inversé par rapport au tableau ci-dessous)
 
@@ -109,8 +109,30 @@ Attention : c'est évident, mais il ne faut pas que les ports soient utilisés p
 
 Il faudra prendre soin d'ouvrir les ports externes dans le pare-feu de Windows. Cela concerne :
 - DCS :  *DCS.ext*
+- DCS WebGUI : *DCS.webgui_port* (pour que la page "Serveurs" de ED puisse accéder au serveur)
 - LotATC : *LotATC.ext*
 - SRS : *SRS.ext*
 - Tacview : *TACVIEW.remoteControl* et *TACVIEW.realtimeTelemetry*
+
+# DCS TCP inbound rules
+New-NetFirewallRule -DisplayName "DCS TCP Inbound" -Direction Inbound -LocalPort 10308 -Protocol TCP -Action Allow
+
+# DCS UDP inbound rules
+New-NetFirewallRule -DisplayName "DCS UDP Inbound" -Direction Inbound -LocalPort 10308 -Protocol UDP -Action Allow
+
+# DCS WebGUI TCP inbound  rules
+New-NetFirewallRule -DisplayName "DCS WebGUI TCP Inbound" -Direction Inbound -LocalPort 8088 -Protocol TCP -Action Allow
+
+# TacView Realtime Telemetry
+New-NetFirewallRule -DisplayName "TacView Realtime Telemetry Inbound" -Direction Inbound -LocalPort 42674 -Protocol TCP -Action Allow
+
+# TacView Remote Control
+New-NetFirewallRule -DisplayName "TacView Remote Control Inbound" -Direction Inbound -LocalPort 42675 -Protocol TCP -Action Allow
+
+# DCS SRS TCP1
+New-NetFirewallRule -DisplayName "DCS SRS TCP1" -Direction Inbound -LocalPort 5002 -Protocol TCP -Action Allow
+
+# DCS SRS TCP2
+New-NetFirewallRule -DisplayName "DCS SRS TCP2" -Direction Inbound -LocalPort 5003 -Protocol TCP -Action Allow
 
 ### Installation de 

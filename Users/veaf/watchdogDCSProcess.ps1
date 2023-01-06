@@ -34,14 +34,14 @@ $LogPath = join-path (Get-Location) ("logs\watchdog-" + $LogfileName + ".log")
 
 #Called when a crash is detected. You can write out to a log or call a discord webhook.
 function onCrash {
-    if (test-path $WebHookOnFailure) {
-        if ($hangcount -ge 5) {
-            & $WebHookOnFailure Error "watchdogProcess" "Process $ProcessName $WindowTitle is frozen, restarting..."
-        }
-        else {
-            & $WebHookOnFailure Warning "watchdogProcess" "Process $ProcessName $WindowTitle is not running (crashed?), restarting..."
-        }
-    }
+#    if (test-path $WebHookOnFailure) {
+#        if ($hangcount -ge 5) {
+#            & $WebHookOnFailure Error "watchdogProcess" "Process $ProcessName $WindowTitle is frozen, restarting..."
+#        }
+#        else {
+#            & $WebHookOnFailure Warning "watchdogProcess" "Process $ProcessName $WindowTitle is not running (crashed?), restarting..."
+#        }
+#   }
 }
 
 function StartProcess {

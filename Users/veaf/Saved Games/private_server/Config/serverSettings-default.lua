@@ -5,8 +5,8 @@
 
 cfg = 
 {
-    ["current"] = 10,
-    ["listStartIndex"] = 10,
+    ["current"] = 1,
+    ["listStartIndex"] = 1,
     ["description"] = "Serveur privé\
 ========================\
 Server description\
@@ -25,15 +25,18 @@ Server description\
         ["client_outbound_limit"] = 0,
         ["client_inbound_limit"] = 0,
         ["server_can_screenshot"] = false,
+        ["allow_players_pool"] = true,
         ["voice_chat_server"] = false,
         ["allow_change_skin"] = true,
         ["event_Connect"] = true,
         ["event_Ejecting"] = false,
         ["event_Kill"] = false,
         ["event_Crash"] = false,
+        ["event_Role"] = false,
+        ["allow_dynamic_radio"] = true,
+        ["allow_trial_only_clients"] = false,
         ["resume_mode"] = 2,
         ["maxPing"] = 0,
-        ["event_Role"] = false,
     }, -- end of ["advanced"]
     ["port"] = 10403,
     ["mode"] = 0,
@@ -43,6 +46,7 @@ Server description\
     ["password"] = "BIRDSEED@dietetic6arroyo",
     ["listLoop"] = false,
     ["name"] = "Serveur privé",
+    ["require_pure_scripts"] = false,
     ["missionList"] = 
     {
       [001] = "C:\\Users\\veaf\\Saved Games\\DCS.missions\\empty-caucasus.miz",
