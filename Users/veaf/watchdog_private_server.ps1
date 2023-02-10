@@ -2,6 +2,7 @@
 
 $ProcessName = "dcs.exe"
 $WindowTitle = "private_server"
+$DCSPort = 10808
 $LogfileName = "DCS-private"
 $ExePath = "C:\Users\veaf\just-run-dcs.cmd"
 #$ExePath = "C:\Users\veaf\refresh-opentraining-and-run-dcs.cmd"
@@ -12,4 +13,4 @@ $Priority = "HIGH"
 $InitialDelay = 60
 $WatchdogDelay = 30
 
-C:/Users/veaf/watchdogDCSProcess.ps1 -ProcessName $ProcessName -WindowTitle $WindowTitle -ExePath $ExePath -CommandLine $CommandLine -WebHookOnFailure $WebHookOnFailure -Priority $Priority -LogfileName $LogfileName -InitialDelay $InitialDelay -WatchdogDelay $WatchdogDelay
+C:/Users/veaf/watchdogDCSProcess.ps1 -ProcessName $ProcessName -WindowTitle $WindowTitle -ExePath $ExePath -CommandLine $CommandLine -DCSPort $DCSPort -WebHookOnFailure $WebHookOnFailure -Priority $Priority -LogfileName $LogfileName -InitialDelay $InitialDelay -WatchdogDelay $WatchdogDelay

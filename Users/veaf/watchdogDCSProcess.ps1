@@ -1,5 +1,6 @@
 #Requires -RunAsAdministrator
 # Because of DCS 2.7 which stopped putting the server name in the WindowsTitle, we needed to change this generic script and make it specific to DCS !
+# 2023.02.10 - added DCS port heartbeat check
 
 param (
     [Parameter(Mandatory, Position=0)]
@@ -15,22 +16,26 @@ param (
     [string] $CommandLine,
 
     [Parameter(Mandatory, Position=4)]
+    [string] $DCSPort,
+
+    [Parameter(Mandatory, Position=5)]
     [string] $WebHookOnFailure,
 	
-    [Parameter(Mandatory, Position=5)]
+    [Parameter(Mandatory, Position=6)]
     [string] $Priority,
 
-    [Parameter(Mandatory, Position=6)]
+    [Parameter(Mandatory, Position=7)]
     [string] $LogfileName,
 
-    [Parameter(Mandatory, Position=7)]
+    [Parameter(Mandatory, Position=8)]
     [string] $InitialDelay,
 
-    [Parameter(Mandatory, Position=7)]
+    [Parameter(Mandatory, Position=9)]
     [string] $WatchdogDelay
 )
 
 $LogPath = join-path (Get-Location) ("logs\watchdog-" + $LogfileName + ".log")
+$DCSaddress = "dcs.veaf.org"
 
 #Called when a crash is detected. You can write out to a log or call a discord webhook.
 function onCrash {
@@ -96,11 +101,24 @@ while ($true) {
 		$process = Get-Process -Id -1 -ErrorAction SilentlyContinue
     } 
 	#write-host ("process = " + $process)
-	
+
+	$heartbeat = $false
 	if ($process) {
 		write-host ("Process " + $ProcessName + " found.")
+		
+		$heartbeat = Test-NetConnection $DCSaddress -port $DCSPort -InformationLevel Quiet
+		if ($heartbeat) {
+			write-host ("DCS server " + $DCSaddress + " is listening on port " + $DCSPort)
+		}
+		else {
+			write-host ("DCS server " + $DCSaddress + " is NOT responding on port " + $DCSPort)
+		}
 	}
-    if ($process.Responding) {
+	else {
+		write-host ("Process " + $ProcessName + " was NOT found.")
+	}
+
+    if ($process.Responding -and $heartbeat) {
         write-host ("Process " + $ProcessName + " found and running. Checking again in $waitTime seconds.")
 
         if ($hangcount -gt 0) {
